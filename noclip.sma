@@ -22,14 +22,6 @@ public plugin_init() {
 
 public client_putinserver(id) {
 	g_bNoclipGodmode[id] = false;
-	set_user_noclip(id, 0);
-	set_user_godmode(id, 0);
-}
-
-public client_disconnected(id) {
-	g_bNoclipGodmode[id] = false;
-	set_user_noclip(id, 0);
-	set_user_godmode(id, 0);
 }
 
 public ToggleNoclipGodmode(id) {
