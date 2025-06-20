@@ -32,6 +32,8 @@ public plugin_init() {
 	register_clcmd("say /checkpoint", "Checkpoint");
 	register_clcmd("say /cp", "Checkpoint");
 
+	register_clcmd("say /gocheck", "CheckpointTeleport");
+	register_clcmd("say /gc", "CheckpointTeleport");
 	register_clcmd("say /teleport", "CheckpointTeleport");
 	register_clcmd("say /tp", "CheckpointTeleport");
 	
