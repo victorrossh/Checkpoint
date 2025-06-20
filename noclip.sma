@@ -50,7 +50,8 @@ public client_putinserver(id) {
 }
 
 public ShowMenu(id) {
-
+	g_bNoclipGodmode[id] = get_user_noclip(id) || get_user_godmode(id);
+	
 	new menu = menu_create("\r[FWO] \d- \wCheckpoint Menu:", "MenuHandler");
 	new szItem[64];
 
