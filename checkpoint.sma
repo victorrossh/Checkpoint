@@ -66,17 +66,17 @@ public ShowMenu(id) {
 	new menu = menu_create("\r[FWO] \d- \wCheckpoint Menu:", "MenuHandler");
 	new szItem[64];
 
-	formatex(szItem, charsmax(szItem) - 1, "Checkpoint #%d", g_CheckpointCount[id]); // Total de CP criados
+	formatex(szItem, charsmax(szItem), "Checkpoint #%d", g_CheckpointCount[id]);
 	menu_additem(menu, szItem, "1");
 
-	formatex(szItem, charsmax(szItem) - 1, "GoCheck #%d^n", g_GocheckCount[id]);
+	formatex(szItem, charsmax(szItem), "GoCheck #%d^n", g_GocheckCount[id]);
 	menu_additem(menu, szItem, "2");
 
 	menu_additem(menu, "LastCP", "3", g_ActiveCheckpoints[id]);
 
 	menu_additem(menu, "Reset^n", "4");
 
-	formatex(szItem, charsmax(szItem) - 1, "\wNoclip %s", g_bNoclipGodmode[id] ? "\y[ON]" : "\r[OFF]");
+	formatex(szItem, charsmax(szItem), "\wNoclip %s", g_bNoclipGodmode[id] ? "\y[ON]" : "\r[OFF]");
 	menu_additem(menu, szItem, "5");
 
 	menu_display(id, menu, 0);
