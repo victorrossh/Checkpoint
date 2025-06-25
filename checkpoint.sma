@@ -72,11 +72,11 @@ public ShowMenu(id) {
 	formatex(szItem, charsmax(szItem), "GoCheck #%d^n", g_GocheckCount[id]);
 	menu_additem(menu, szItem, "2");
 
-	menu_additem(menu, "LastCP", "3", g_ActiveCheckpoints[id]);
+	menu_additem(menu, "LastCP", "3");
 
 	menu_additem(menu, "Reset^n", "4");
 
-	formatex(szItem, charsmax(szItem), "\wNoclip %s", g_bNoclipGodmode[id] ? "\y[ON]" : "\r[OFF]");
+	formatex(szItem, charsmax(szItem), "Noclip %s", g_bNoclipGodmode[id] ? "\y[ON]" : "\r[OFF]");
 	menu_additem(menu, szItem, "5");
 
 	menu_display(id, menu, 0);
