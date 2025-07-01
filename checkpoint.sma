@@ -2,6 +2,7 @@
 #include <fun>
 #include <cromchat2>
 #include <engine>
+#include <timer>
 
 #define PLUGIN "Checkpoint System"
 #define VERSION "1.0"
@@ -89,6 +90,9 @@ public MenuHandler(id, menu, item) {
 		return PLUGIN_HANDLED;
 	}
 
+	// Resets the player's timer when using any menu item
+	reset_player_timer(id);
+
 	switch(item) {
 		case 0: Checkpoint(id);
 		case 1: CheckpointTeleport(id);
@@ -100,7 +104,7 @@ public MenuHandler(id, menu, item) {
 	ShowMenu(id);
 	menu_destroy(menu);
 	return PLUGIN_HANDLED;
-}
+} 
 
 public Checkpoint(id) {
 	if (!is_user_alive(id)) {
