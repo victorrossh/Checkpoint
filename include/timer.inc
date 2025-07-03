@@ -35,4 +35,5 @@ native get_entity_start();
 native get_entity_finish();
 
 // Resets the player's timer. Used in the checkpoint system so that when the player uses a checkpoint, the timer is reset.
+native bool:is_timer_active(id);
 native reset_player_timer(id);

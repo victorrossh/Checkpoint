@@ -91,7 +91,8 @@ public MenuHandler(id, menu, item) {
 	}
 
 	// Resets the player's timer when using any menu item
-	reset_player_timer(id);
+	if (is_timer_active(id)) 
+		reset_player_timer(id);
 
 	switch(item) {
 		case 0: Checkpoint(id);
